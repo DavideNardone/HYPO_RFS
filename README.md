@@ -26,6 +26,7 @@ The algorithm presented here, uses a *grid-search* combined with a *majority vot
  # Authors
 
   Davide Nardone
+  
   https://www.linkedin.com/in/davide-nardone-127428102/
   
 # Contacts
