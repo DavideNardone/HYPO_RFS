@@ -20,7 +20,7 @@ The algorithm presented here, uses a *grid-search* combined with a *majority vot
  
  # Usage
  
- Run `hypo_main.py` for a naive example. It provides the best combination for a single parameters.
+ Run `hypo_main.py` for a naive example. It provides the best combination for a single parameter.
  
  
  # Authors
