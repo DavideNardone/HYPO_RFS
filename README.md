@@ -4,7 +4,8 @@ HYPO_RFS is an algorithm for performing exhaustive grid-search approach for hype
 
 If you don't have any background on feature selection, please refer to the following [source](https://machinelearningmastery.com/an-introduction-to-feature-selection/).
 
-Most Feature Selection (FS) algorithms output different information. Most of them, also provide information about the discriminative power of the feature selected, which can be exploit for *ranking* the retrieved feature, that is, the most discriminative feature are placed ahead to the others (e.g., sort the feature scores in an ascending order according to the feature scores). You can find more information about this type of algorithm [here](http://blog.datadive.net/selecting-good-features-part-ii-linear-models-and-regularization/).
+Feature Selection algorithms provides as output several information such that it's possibile to distinguish one approach from another. 
+In particular, RFS algorithms provide information about the discriminative power of the retrived feature, which can be exploited as *ranking* information, such that the most discriminative feature are placed ahead to the others (e.g., sort the feature scores in an ascending order according to the feature scores). You can find more information about this type of algorithm [here](http://blog.datadive.net/selecting-good-features-part-ii-linear-models-and-regularization/).
 
 As you may also know, most of the FS algorithm are ruled by several pararameters which in turn, whether changed, may provide different outputs. Therefore, it is importat to tune these parameter in order to find the best combination of them which work better for a certain number of features (e.g., the first 30/500 ranked features).
 
