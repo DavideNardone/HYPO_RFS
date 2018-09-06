@@ -1,6 +1,6 @@
 # HYPO_RFS
 
-HYPO_RFS is an algorithm for performing exhaustive grid-search approach for hyper-parameters optimization on Ranking Feature Selection (RFS) approach.
+HYPO_RFS is an algorithm for performing exhaustive grid-search approach for hyper-parameters optimization on Ranking Feature Selection (RFS) approaches.
 
 If you don't have any background on feature selection, please refer to the following [source](https://machinelearningmastery.com/an-introduction-to-feature-selection/).
 
