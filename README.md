@@ -23,7 +23,7 @@ The algorithm presented here, uses an *exhaustive grid-search* combined with a *
  
  # Results
  
- In this example we tuned the alpha parameter for the LASSO.
+...
  
  # Authors
 
