@@ -1,6 +1,6 @@
 from sklearn.linear_model import ElasticNet,Lasso
 from sklearn.feature_selection import mutual_info_classif
-from skfeature.utility.sparse_learning import feature_ranking
+from skfeature.utility.sparse_learning import feature_ranking, construct_label_matrix
 from skfeature.function.sparse_learning_based import RFS,ls_l21,ll_l21
 from skfeature.function.similarity_based import reliefF
 from skfeature.function.information_theoretical_based import MRMR
@@ -24,10 +24,14 @@ class FeatureSelector:
         for par_name,par in zip(params_name,comb_par):
             self.params[par_name] = par
 
+        # print self.params
+
     def fit(self, X, y):
 
 
         if self.name == 'LASSO':
+
+            # print self.params['alpha']
 
             LASSO = Lasso(alpha=self.params['alpha'], positive=True)
 
@@ -42,10 +46,15 @@ class FeatureSelector:
 
         if self.name == 'EN': # elastic net L1
 
+            # alpha = self.params['alpha']
+
+            # alpha = .9 - ((self.params['alpha'] - 1.0) * (1 - 0.1)) / ((50 - 1) + 0.1)
+            # print alpha
+
             enet = ElasticNet(alpha=self.params['alpha'], l1_ratio=1, positive=True)
 
             y_pred_enet = enet.fit(X, y)
-
+            # if y_pred_enet.coef_
             if y_pred_enet.coef_.ndim == 1:
                 coeff = y_pred_enet.coef_
             else:
@@ -54,18 +63,19 @@ class FeatureSelector:
             idx =  np.argsort(-coeff)
 
         if self.name == 'RFS':
-            W = RFS.rfs(X, y,gamma=self.params['gamma'])
+
+            W = RFS.rfs(X, construct_label_matrix(y), gamma=self.params['gamma'])
             idx = feature_ranking(W)
 
         if self.name == 'll_l21':
             # obtain the feature weight matrix
-            W, _, _ = ll_l21.proximal_gradient_descent(X, y, z=self.params['z'], verbose=False)
+            W, _, _ = ll_l21.proximal_gradient_descent(X, construct_label_matrix(y), z=self.params['z'], verbose=False)
             # sort the feature scores in an ascending order according to the feature scores
             idx = feature_ranking(W)
 
         if self.name == 'ls_l21':
             # obtain the feature weight matrix
-            W, _, _ = ls_l21.proximal_gradient_descent(X, y, z=self.params['z'], verbose=False)
+            W, _, _ = ls_l21.proximal_gradient_descent(X, construct_label_matrix(y), z=self.params['z'], verbose=False)
 
             # sort the feature scores in an ascending order according to the feature scores
             idx = feature_ranking(W)

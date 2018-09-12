@@ -40,27 +40,25 @@ def main():
     # initializing feature selector parameters
     params = {
 
-        'LASSO':
+        'RFS':
             {
-                'alpha': 1  # default value is 1
+                'gamma': 1  # default value is 1
             }
     }
 
     # parameters to exhaustively combine
     tuned_parameters = {
 
-        'alpha': [1e-15, 1e-10, 1e-8, 1e-5,1e-4, 1e-3,1e-2, 1, 5, 10],
-        # 'delta': [10,20],
-
+        'gamma': [1e-15, 1e-10, 1e-8, 1e-5,1e-4, 1e-3,1e-2, 1, 5, 10],
     }
 
     hypo = hp.Hypo(
-        feature_selector=fs.FeatureSelector(name='LASSO', params=params['LASSO']),
-        estimator=SVC(kernel="linear"),
-        tuned_parameters=tuned_parameters,
-        cv=5,
-        max_num_feat=25,
-        scoring='accuracy'
+        feature_selector = fs.FeatureSelector(name='RFS', params=params['RFS']),
+        estimator = SVC(kernel="linear"),
+        tuned_parameters = tuned_parameters,
+        cv = 5,
+        max_num_feat=100,
+        scoring = 'accuracy'
     )
 
     hypo.fit(X, y)
