@@ -149,7 +149,7 @@ class Hypo:
             if _res_voting[comb] > _max:
                 _max = _res_voting[comb]
                 self.best_comb = comb
-            print ('Parameters set: ' + comb.__str__() + ' got votes: ' + _res_voting[comb].__str__())
+            print ('Parameters set: ' + comb.__str__() + ' got ' + _res_voting[comb].__str__() + ' votes:' )
 
         print ('\nBest parameters set found on development set is: ' + self.best_comb.__str__())
 
