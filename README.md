@@ -19,9 +19,37 @@ The approach presented here, uses an exhaustive grid-search combined with a majo
  
  Run `hypo_main.py` for a naive example. It provides the best combination for a single parameter.
  
- # Results
+ # Example
  
-...
+ In this example we tuned the gamma parameter for the RFS approach.
+ 
+![alt text](img/HYPO.png "")
+
+`Output:` 
+Hyper-params. comb=(1e-15,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-10,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-08,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-05,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(0.0001,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(0.001,) has minimum variance of 0.00134989415512
+Hyper-params. comb=(0.01,) has minimum variance of 0.00668182191136
+Hyper-params. comb=(1,) has minimum variance of 0.00933692240997
+Hyper-params. comb=(5,) has minimum variance of 0.0116352984765
+Hyper-params. comb=(10,) has minimum variance of 0.0098559965374
+
+Applying majority voting...
+Parameters set: (1e-15,) got votes: 1.0
+Parameters set: (1e-10,) got votes: 1.0
+Parameters set: (1e-08,) got votes: 1.0
+Parameters set: (1e-05,) got votes: 1.0
+Parameters set: (0.0001,) got votes: 1.0
+Parameters set: (0.001,) got votes: 0.0
+Parameters set: (0.01,) got votes: 0.0
+Parameters set: (1,) got votes: 2.0
+Parameters set: (5,) got votes: 1.0
+Parameters set: (10,) got votes: 98.0
+
+
  
  # Authors
 
