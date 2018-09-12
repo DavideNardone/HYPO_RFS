@@ -2,14 +2,11 @@
 
 HYPO_RFS is a exhaustive grid-search Ranking Feature Selection (RFS) approach for hyperparameter optimization. If you don't have any background on feature selection, please refer to the following [source](https://machinelearningmastery.com/an-introduction-to-feature-selection/).
 
-Feature Selection (FS) algorithms usually output several information and depending on the type the algorithm they might output some information regarding the relevance of the features retrieved. Such class of algorithm may be know as Ranking Feature Selection.
-  
-RFS algorithms output certain information such that it's possible to exploit it as *ranking* information (e.g., sorting the RFS scores in an descending order such that the higher the score, the more important the feature is). Some RFS alogorithm are: Relief, Fisher, RFS, etc. Here for [more information](http://eprints.kku.edu.sa/170/1/feature_selection_for_classification.pdf) about these algorithms.
+A class of Feature Selection (FS) algorithm, the so called RFS, outputs certain information (e.g., weight matrix, score vector, etc.) such that is possible to exploit such elements as feature ranking information (e.g., sorting the RFS scores in a descending order such that: the higher the score, the more important the feature is). Some RFS algorithms are: Relief, Fisher, RFS, etc. Here for [more information](http://eprints.kku.edu.sa/170/1/feature_selection_for_classification.pdf) about these algorithms.
 
-As you may also know, most of the FS algorithms are ruled by several pararameters which in turn, whether changed, may provide different outputs. Therefore, it is importat to tune these parameter in order to find the best combination of them which work better for a certain number of features (e.g., the first 30/500 ranked features).
+As you may know, most of the FS algorithms are ruled by several parameters, which in turn (whether changed) may affect the accuracy of a classification task. Therefore, it is important to tune such parameters in order to find the best combination of them which work better for a certain number of features (e.g., the first 30/500 ranked features).
 
-The algorithm presented here, uses a *grid-search* combined with a *majority vote* approach for tunining the hyper-parameters of the FS algorithm.
-
+The approach presented here, uses an exhaustive grid-search combined with a majority vote approach for tuning the hyper-parameters of RFS algorithms.
 
 # Requirements
 
@@ -22,6 +19,37 @@ The algorithm presented here, uses a *grid-search* combined with a *majority vot
  
  Run `hypo_main.py` for a naive example. It provides the best combination for a single parameter.
  
+ # Example
+ 
+ In this example we tuned the gamma parameter for the RFS approach.
+ 
+![alt text](img/HYPO.png "")
+
+`Output:` 
+Hyper-params. comb=(1e-15,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-10,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-08,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(1e-05,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(0.0001,) has minimum variance of 0.00183784739612
+Hyper-params. comb=(0.001,) has minimum variance of 0.00134989415512
+Hyper-params. comb=(0.01,) has minimum variance of 0.00668182191136
+Hyper-params. comb=(1,) has minimum variance of 0.00933692240997
+Hyper-params. comb=(5,) has minimum variance of 0.0116352984765
+Hyper-params. comb=(10,) has minimum variance of 0.0098559965374
+
+Applying majority voting...
+Parameters set: (1e-15,) got votes: 1.0
+Parameters set: (1e-10,) got votes: 1.0
+Parameters set: (1e-08,) got votes: 1.0
+Parameters set: (1e-05,) got votes: 1.0
+Parameters set: (0.0001,) got votes: 1.0
+Parameters set: (0.001,) got votes: 0.0
+Parameters set: (0.01,) got votes: 0.0
+Parameters set: (1,) got votes: 2.0
+Parameters set: (5,) got votes: 1.0
+Parameters set: (10,) got votes: 98.0
+
+
  
  # Authors
 
