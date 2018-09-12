@@ -9,14 +9,33 @@ import sys
 sys.path.insert(0, '/src')
 import FeatureSelector as fs
 import Hypo as hp
+import Loader as lr
 
 
 def main():
 
-    # loading data
-    data = load_breast_cancer()
-    X = data.data
-    y = data.target
+    ''' LOADING ANY DATASET '''
+    dataset_dir = '/dataset'
+    dataset_type = '/BIOLOGICAL'
+    dataset_name = '/LUNG_DISCRETE'
+
+    path_data_folder = dataset_dir + dataset_type + dataset_name
+    path_data_file = path_data_folder + dataset_name
+
+    variables = ['X', 'Y']
+    # NB: If you get an error such as: 'Please use HDF reader for matlab v7.3 files',please change the 'format variable' to 'matlab_v73'
+    D = lr.Loader(file_path=path_data_file,
+                  format='matlab',
+                  variables=variables,
+                  name=dataset_name[1:]
+                  ).getVariables(variables=variables)
+
+    dataset = lr.Dataset(D['X'], D['Y'])
+
+    dataset.standardizeDataset()
+
+    X = dataset.data
+    y = dataset.target
 
     # initializing feature selector parameters
     params = {
@@ -45,7 +64,13 @@ def main():
     )
 
     hypo.fit(X, y)
+
     hypo.tuning_analysis(n_feats=10)
+
+    hypo.plotAccuracy(
+        n_feats = 100,
+        step_size=5
+    )
 
 if __name__ == '__main__':
     main()
