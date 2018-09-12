@@ -38,16 +38,16 @@ Hyper-params. comb=(5,) has minimum variance of 0.01163 <br>
 **Hyper-params. comb=(10,) has minimum variance of 0.00985** <br>
 
 Applying majority voting... <br>
-Parameters set: (1e-15,) got votes: 1.0 <br>
-Parameters set: (1e-10,) got votes: 1.0 <br>
-Parameters set: (1e-08,) got votes: 1.0 <br>
-Parameters set: (1e-05,) got votes: 1.0 <br>
-Parameters set: (0.0001,) got votes: 1.0 <br>
-Parameters set: (0.001,) got votes: 0.0 <br>
-Parameters set: (0.01,) got votes: 0.0 <br>
-Parameters set: (1,) got votes: 2.0 <br>
-Parameters set: (5,) got votes: 1.0 <br>
-**Parameters set: (10,) got votes: 98.0** <br>
+Parameters set: (1e-15,) got 1.0 votes <br>
+Parameters set: (1e-10,) got 1.0 votes <br>
+Parameters set: (1e-08,) got 1.0 votes <br>
+Parameters set: (1e-05,) got 1.0 votes <br>
+Parameters set: (0.0001,) got 1.0 votes <br>
+Parameters set: (0.001,) got 0.0 votes <br>
+Parameters set: (0.01,) got 0.0 votes <br>
+Parameters set: (1,) got 2.0 votes <br>
+Parameters set: (5,) got 1.0 votes <br>
+**Parameters set: (10,) got 98.0 votes** <br>
 
  # Authors
 
