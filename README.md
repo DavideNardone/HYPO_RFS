@@ -1,6 +1,6 @@
 # HYPO_RFS
 
-HYPO_RFS is a exhaustive grid-search Ranking Feature Selection (RFS) approach for hyperparameter optimization. If you don't have any background on feature selection, please refer to the following [source](https://machinelearningmastery.com/an-introduction-to-feature-selection/).
+HYPO_RFS is an exhaustive grid-search Ranking Feature Selection (RFS) approach for hyperparameter optimization. If you don't have any background on feature selection, please refer to the following [source](https://machinelearningmastery.com/an-introduction-to-feature-selection/).
 
 A class of Feature Selection (FS) algorithm, the so called RFS, outputs certain information (e.g., weight matrix, score vector, etc.) such that is possible to exploit such elements as feature ranking information (e.g., sorting the RFS scores in a descending order such that: the higher the score, the more important the feature is). Some RFS algorithms are: Relief, Fisher, RFS, etc. Here for [more information](http://eprints.kku.edu.sa/170/1/feature_selection_for_classification.pdf) about these algorithms.
 
