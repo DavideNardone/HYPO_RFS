@@ -23,7 +23,7 @@ The approach presented here, uses an exhaustive grid-search combined with a majo
  
  In this example we tuned the *γ* parameter for the RFS approach.
  
-![alt text](img/HYPO.png "")
+![alt text](img/Relief.png "")
 
 `Output:` <br>
 Hyper-params. comb=(1e-15,) has minimum variance of 0.00183 <br>
