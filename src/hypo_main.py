@@ -1,7 +1,5 @@
 from __future__ import division
-
 from sklearn.svm import SVC
-from sklearn.datasets import load_breast_cancer
 
 import numpy as np
 np.set_printoptions(threshold=np.inf)
@@ -31,8 +29,6 @@ def main():
                   ).getVariables(variables=variables)
 
     dataset = lr.Dataset(D['X'], D['Y'])
-
-    dataset.standardizeDataset()
 
     X = dataset.data
     y = dataset.target

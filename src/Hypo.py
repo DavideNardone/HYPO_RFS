@@ -1,9 +1,9 @@
 from sklearn.model_selection import KFold
-from matplotlib import pyplot as plt
-import sys
+from sklearn.preprocessing import StandardScaler
 import itertools
 import numpy as np
 from matplotlib import pyplot as plt
+
 
 class Hypo:
 
@@ -68,6 +68,10 @@ class Hypo:
 
                 X_train, X_test = X[train_index, :], X[test_index, :]
                 y_train, y_test = y[train_index], y[test_index]
+
+                std = StandardScaler()
+                X_train = std.fit_transform(X_train)
+                X_test = std.transform(X_test)
 
                 idx = self.feature_selector.fit(X_train, y_train)
                 IDX.append(idx)
