@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ssh://nardone@saturn.uniparthenope.it:22/home/nardone/anaconda2/bin/python" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="saturn" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="ssh://nardone@saturn.uniparthenope.it:22/home/nardone/anaconda2/bin/python">
+      <paths name="saturn">
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/pycharm_project_271" local="$PROJECT_DIR$" />

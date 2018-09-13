@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ssh://nardone@saturn.uniparthenope.it:22/home/nardone/anaconda2/bin/python" name="ssh://nardone@saturn.uniparthenope.it:22/home/nardone/anaconda2/bin/python">
+      <webServer id="ssh://nardone@saturn.uniparthenope.it:22/home/nardone/anaconda2/bin/python" name="saturn">
         <fileTransfer host="saturn.uniparthenope.it" port="22" rootFolder="/home/nardone" accessType="SFTP">
           <option name="port" value="22" />
         </fileTransfer>
