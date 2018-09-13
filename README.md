@@ -21,7 +21,7 @@ The approach presented here, uses an exhaustive grid-search combined with a majo
  
  # Example
  
- In this example we tuned the *γ* parameter for the RFS approach.
+ In this example we tuned the *k* parameter for the Relief approach.
  
 ![alt text](img/Relief.png "")
 
