@@ -26,30 +26,24 @@ The approach presented here, uses an exhaustive grid-search combined with a majo
 ![alt text](img/Relief.png "")
 
 `Output:` <br>
-Hyper-params. comb=(1e-15,) has minimum variance of 0.00183 <br>
-Hyper-params. comb=(1e-10,) has minimum variance of 0.001837 <br>
-Hyper-params. comb=(1e-08,) has minimum variance of 0.001837 <br>
-Hyper-params. comb=(1e-05,) has minimum variance of 0.001837 <br>
-Hyper-params. comb=(0.0001,) has minimum variance of 0.001837 <br>
-Hyper-params. comb=(0.001,) has minimum variance of 0.00134 <br>
-Hyper-params. comb=(0.01,) has minimum variance of 0.00668 <br>
-Hyper-params. comb=(1,) has minimum variance of 0.00933 <br>
-Hyper-params. comb=(5,) has minimum variance of 0.01163 <br>
-**Hyper-params. comb=(10,) has minimum variance of 0.00985** <br>
+Hyper-params. comb=(1,) has minimum variance of 0.00549974950617 <br>
+Hyper-params. comb=(3,) has minimum variance of 0.00677656790123 <br>
+Hyper-params. comb=(5,) has minimum variance of 0.0049215782716 <br>
+**Hyper-params. comb=(7,) has minimum variance of 0.00669833320988** <br>
+Hyper-params. comb=(9,) has minimum variance of 0.0123234320988 <br>
+Hyper-params. comb=(11,) has minimum variance of 0.00763936925926 <br>
+Hyper-params. comb=(13,) has minimum variance of 0.00688333037037 <br>
 
 Applying majority voting... <br>
-Parameters set: (1e-15,) got 1.0 votes <br>
-Parameters set: (1e-10,) got 1.0 votes <br>
-Parameters set: (1e-08,) got 1.0 votes <br>
-Parameters set: (1e-05,) got 1.0 votes <br>
-Parameters set: (0.0001,) got 1.0 votes <br>
-Parameters set: (0.001,) got 0.0 votes <br>
-Parameters set: (0.01,) got 0.0 votes <br>
-Parameters set: (1,) got 2.0 votes <br>
-Parameters set: (5,) got 1.0 votes <br>
-**Parameters set: (10,) got 98.0 votes** <br>
+Parameters set: (1,) got votes: 0.0 <br>
+Parameters set: (3,) got votes: 0.0 <br>
+Parameters set: (5,) got votes: 3.0 <br>
+**Parameters set: (7,) got votes: 64.0** <br>
+Parameters set: (9,) got votes: 25.0 <br>
+Parameters set: (11,) got votes: 0.0 <br>
+Parameters set: (13,) got votes: 8.0
 
-Best parameters set found on development set is: (10,) <br>
+Best parameters set found on development set is: (7,) <br>
 
  # Authors
 
